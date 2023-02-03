@@ -1,46 +1,33 @@
-import React from "react";
-import './App.css';
-
-const Grupo = () => {
-  return (
-    <div>
-      <h1>Grupo E</h1>
-    </div>
-  )
-}
-
-const Person = () => {
-  return (
-    <div>
-      <h1>Guillem Jimenez</h1>
-      <h1>Luis Castillo</h1>
-      <h1>Raul Vaquerizo</h1>
-    </div>
-    );
-};
-
-
-
-const TextInfo = () => {
-  return(
-    <div>
-      <input type="date" id="date" name="date"/>
-    </div>
-  )
-}
+import React, { useState } from 'react';
 
 function App() {
-  return (
-    <div className="App">
-		<label>FECHA INICIO </label>
-        <input type="date" id="date" name="date"/><p></p>
-        <label>FECHA FIN </label>
-        <input type="date" id="date" name="date"/><p></p>
-        <label>FECHA ENTREGA </label>
-        <input type="date" id="date" name="date"/>
-     
-    </div>
-  );
+    const [count, setCount] = useState(0);
+    const [count1, setCount1] = useState(0);
+    const increment = () => {
+        setCount1(count1 + 1);}
+    const decrement = () =>{
+        setCount1(count1-1);}
+    const reset = () =>{
+        setCount1(0);
+    }
+    return (
+        <div align="center" className="App">
+            <h1>{count}</h1>
+            <button onClick={() => setCount(count + 1)}>
+                Augmentar edat
+            </button><p></p>
+
+            <h1>{count1}</h1>
+
+            <button className='inc' onClick={increment}>Increment!</button>
+            <button className='dec' onClick={decrement}>Decrement!</button>
+            <button className='reset' onClick={reset}>Reset</button>
+
+        </div>
+
+    );
 }
+
+
 
 export default App;
