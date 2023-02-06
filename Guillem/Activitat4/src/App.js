@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import {useRef, useState} from "react"
+import Button from "./Button";
 
-export default function App() {
+function App() {
+
     const [colorText, setColorText] = useState('green');
-    return (
+
+    return(
         <div align="center" className="App">
-            <button onClick={() => {
-                setColorText(colorText === 'green'? 'red':'green')
-            }}>Canvi
-            </button>
+            <Button></Button>
             <h1 style={{color: colorText}}>CANVI DE COLOR</h1>
         </div>
-    );
+      );
 }
+
+export default App
