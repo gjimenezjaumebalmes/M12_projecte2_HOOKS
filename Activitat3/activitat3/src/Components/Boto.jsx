@@ -1,11 +1,15 @@
-
-export const Boto = (props) => {
-
+export const Button = (props) => {
   return (
-    <div className="Boto">
-      <button onClick={(value = 1) => { {props.var} }}>Increase</button>
-      <button onClick={(value = -1) => { {props.var2} }}>Decrease</button>
-      <button onClick={(value = 0) => { {props.var3} }}>Reset</button>
-    </div>
+    <>
+      <button className="Buttons" onClick={props.funcio}>{props.name}</button>
+    </>
   );
-}
+};
+
+export const ComponentResultat = (props) => {
+  return (
+    <>
+      <div>{props.number}</div>
+    </>
+  );
+};
