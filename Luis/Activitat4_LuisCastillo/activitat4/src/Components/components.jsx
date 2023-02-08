@@ -1,40 +1,20 @@
-import { useState } from "react";
 
-export const ChangeColor = () => {
-  const [colorText, setColorText] = useState("green");
-
+export const Button = (props) => {
   return (
     <>
-      <button
-        onClick={() => {
-          setColorText(colorText === "green" ? "purple" : "green");
-        }}
-      >
-        CHANGE COLOR
+      <button className="Buttons" onClick={props.const}>
+        {props.name}
       </button>
-      <h1 style={{ color: colorText }}>CANVI DE COLOR</h1>
     </>
   );
 };
 
-/*
-Ejemplo de codigo proporcionado por los profes
-
-function App() {
-  const [colorText, setColorText] = useState("green");
-
+export const Result = (props) => {
   return (
-    <div className="App">
-      <button
-        onClick={() => {
-          setColorText(colorText == "green" ? "purple" : "green");
-        }}
-      >
-        Canvi
-      </button>
-      <h1 style={{ color: colorText }}>CANVI DE COLOR</h1>
-    </div>
+    <>
+      <div> 
+        <h1 style={{color: props.colors}}>{props.text} </h1> </div>
+    </>
   );
-}
+};
 
-*/

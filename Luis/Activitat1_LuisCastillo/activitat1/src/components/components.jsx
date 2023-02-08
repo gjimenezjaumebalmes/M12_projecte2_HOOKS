@@ -1,18 +1,21 @@
-import { useState } from "react";
 
-export const Prueba = () => {
-  const [mostrarComponente, setMostrarComponente] = useState(true);
-
+export const Button = (props) => {
   return (
     <>
-      {/*Con un estado adicional le dicen cuando mostrarse o no*/}
-      <button onClick={() => setMostrarComponente(!mostrarComponente)}>
-        {/*Aqui solo cambio el texto de mi boton, para el ejemplo */}
-        {mostrarComponente ? `Show/Hide` : `Show/Hide`}
+      <button className="Buttons" onClick={props.const}>
+        {props.name}
       </button>
-      <div className={mostrarComponente ? "show-element" : null}>
-        {mostrarComponente && <h1>El text es mostra</h1>}
-      </div>
     </>
   );
 };
+
+
+export const Result = (props) => {
+  return (
+    <>
+      <div> 
+        <h1 style={{color: props.colors}}>{props.text} </h1> </div>
+    </>
+  );
+};
+

@@ -1,41 +1,26 @@
-import React, { useState } from "react";
 
-//Parte a del ejercicio 2
-export function Button() {
-  const [count, setCount] = useState(0);
-
+export const Button = (props) => {
   return (
-    <div>
-      <button onClick={() => setCount(count + 1)}>Augmentar edat</button>
-      <p>{count}</p>
-    </div>
+    <>
+      <button className="Buttons" onClick={props.funcio}>
+        {props.name}
+      </button>
+    </>
   );
-}
+};
 
-//Parte b del ejercicio2
-export function Button1() {
-  const [count, setCount] = useState(0);
-
+export const Result = (props) => {
   return (
-    <div>
-      <button onClick={() => setCount(count + 1)}>Increase</button>
-      <button onClick={() => setCount(count - 1)}>Decrease</button>
-      <button onClick={() => setCount(0)}>Reset</button>
-      <p> {count}</p>
-    </div>
+    <>
+      <div>{props.number}</div>
+    </>
   );
-}
+};
 
-/*
-Ejemplo de la funcion para el apartado a
- export function Button() {
-  const [count, setCount] = useState(0);
-
+export const Text = (props) => {
   return (
-    <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
-    </div>
+    <>
+      <h1>{props.text}</h1>
+    </>
   );
-}
-*/
+};
