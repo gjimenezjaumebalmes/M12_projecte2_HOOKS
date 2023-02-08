@@ -14,8 +14,11 @@ export const Result = (props) => {
   return (
     <>
       <div> 
-        <h1 style={{color: props.colors}}>{props.text} </h1> </div>
+       {props.name && <h1>{props.text} </h1>}
+         </div>
     </>
   );
 };
 
+
+ 
